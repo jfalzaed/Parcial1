@@ -53,7 +53,7 @@ while True:
     if opcion == 1:
         #utilizamos la funcion pedir manual que esta en el archivo process
         #y le pasamos la lista de los ascensores porque la necesita
-        process.pedirManual(lascensores)
+        process.pedirManual(lascensores, basePisos, topepisos)
     elif opcion == 2:
 
         #pedimos el numero de datos dummies que quiere el usuario
@@ -86,7 +86,7 @@ while True:
             ascensor_elegido = int(input("Ingrese el número del ascensor que prefieres: "))
 
             if 1 <= ascensor_elegido <= len(lascensores):
-                if lasascensores[0].ocupado:  #verifica si la opción 3 (primeros 10 ascensores) está activa
+                if lascensores[0].ocupado:  #verifica si la opción 3 (primeros 10 ascensores) está activa
                     if ascensor_elegido <= 10:  #verifica si el ascensor está dentro de los primeros 10
                         Ppersona = int(input("Ingrese el número del piso donde está la persona: "))
                         Pdestino = int(input("Ingrese el número del piso donde va la persona: "))
